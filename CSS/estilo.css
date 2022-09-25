@@ -25,7 +25,8 @@ body {
     display: flex;
     justify-content: right;
     align-items: right;
-    background-color: #00000067;
+    background-color: black;
+    box-shadow: 0px 0px 10px black;
 }
 
 .btn-menu {
@@ -50,28 +51,18 @@ body {
     border-radius: 20px 5px;
 }
 
-.btn-menu .a-entrar {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-}
-
-.btn-menu .a-entrar:hover {
-    background-color: rgb(255, 255, 255);
-    color: black;
-}
-
 /* -----Main do Site----- */
 
 main {
     width: 100%;
-    height: 600px;
+    height: 100%;
     background-color: var(--corAzulClaro);
     background-image: url('../imgs/pexels-pavel-danilyuk-7191163.jpg');
     background-size: cover;
 }
 
 .bloco-container {
-    background-color: #00000067;
+    background-color: #000000a9;
     width: 100%;
     height: 100%;
 }
@@ -82,7 +73,7 @@ main {
     font-size: 40px;
     text-align: center;
     color: white;
-    padding-top: 70px;
+    padding-top: 90px;
 }
 
 .descricao-main {
@@ -98,7 +89,7 @@ main {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    margin-top: 50px;
+    padding: 50px 0px 200px 0px;
 }
 
 .btn-loja a {
@@ -113,6 +104,7 @@ main {
 .btn-loja a:hover {
     background-color: #040f17;
     padding: 10px 80px;
+    border-radius: 10px 20px;
 }
 
 /* Produtos do Site */
@@ -127,7 +119,7 @@ main {
 .produtos {
     display: inline-table;
     width: 200px;
-    height: 260px;
+    height: 100%;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.249);
     margin: 10px;
     background-color: rgb(11, 15, 15);
@@ -155,7 +147,7 @@ main {
 .adicionar-carrinho {
     font-family: 'Lato', sans-serif;
     font-weight: bold;
-    margin-top: 25px;
+    padding: 25px 0px 20px 0px;
     text-align: center;
 }
 
@@ -171,6 +163,110 @@ main {
     color: white;
     background-color: #006483;
 
+}
+
+/* Anúncios do Site */
+
+.container-anuncio-home {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    animation: rgb-div 7s infinite;
+}
+
+@keyframes rgb-div {
+}
+
+.container-anuncio-home h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: orange;
+    padding: 60px 0px 60px 30px;
+    font-size: 55px;
+    text-align: center;
+}
+
+.btn-anuncio {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding: 40px 0px;
+}
+
+.btn-anuncio a {
+    color: white;
+    background-color: rgb(0, 119, 255);
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: .3s;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
+}
+
+.btn-anuncio a:hover {
+    background-color: rgb(0, 27, 58);
+    border-radius: 8px 17px;
+    box-shadow: none;
+}
+
+.container-infos {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0px;
+    background-color: rgb(12, 12, 18);
+    margin-bottom: 30px;
+}
+
+.bloco-info {
+    display: inline-table;
+    width: 200px;
+    height: 250px;
+    background-color: white;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.487);
+    margin: 15px 20px;
+    border-radius: 20px;
+    transition: .4s;
+    animation: bloco-mover 4s;
+}
+
+.bloco-info:hover {
+    width: 210px;
+    height: 260px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.bloco-info p {
+    font-family: 'Montserrta', sans-serif;
+    font-weight: bolder;
+    font-size: 28px;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+@keyframes bloco-mover {
+    0% {
+        transform:translateY(120px)
+    }
+
+    100% {
+        transform:translateX(0px)
+    }
+
+    from { 
+        opacity: 0;
+        width: 300px;
+        border-radius: 0px;
+    }
+
+    to {
+        opacity: 1;
+        width: 200px;
+        border-radius: 20px;
+    }
 }
 
 /* Login do Site */
@@ -204,7 +300,7 @@ main {
 .input-login {
     border: .5px solid rgb(0, 0, 0);
     font-size: 16px;
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 5px;
     margin: 5px 0px 0px 20px;
     width: 260px;
@@ -234,7 +330,7 @@ main {
 }
 
 ::-webkit-input-placeholder {
-    color: #1e1f29;
+    color: rgb(53, 53, 57);
     font-size: 15px;
 }
 
@@ -246,6 +342,15 @@ main {
     color: #878787;
     text-decoration: underline;
     cursor: pointer;
+}
+
+/* Loja do Site */
+
+.container-produtos-loja {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 /* Footer do site */
